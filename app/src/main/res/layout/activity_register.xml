@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:layout_margin="16dp"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+
+        <!--Title-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/coiny"
+            android:gravity="center_horizontal"
+            android:text="@string/app_name"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="58sp" />
+
+        <!--Subtitle-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_bold"
+            android:gravity="center_horizontal"
+            android:text="@string/register"
+            android:textColor="@color/white_50"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <!--Имя-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TIL_Dark"
+            android:layout_marginTop="@dimen/margin_between_elements">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/user_name"
+                android:inputType="textCapWords" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Фамилия-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TIL_Dark"
+            android:layout_marginTop="@dimen/margin_between_elements">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietSurname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/user_surname"
+                android:inputType="textCapWords"  />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Ник-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TIL_Dark"
+            android:layout_marginTop="@dimen/margin_between_elements">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietNickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/nickname"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--email-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TIL_Dark"
+            android:layout_marginTop="@dimen/margin_between_elements">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Пароль-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TIL_Dark"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/white_50"
+            android:layout_marginTop="@dimen/margin_between_elements">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/password"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_between_elements"
+            android:orientation="vertical">
+
+            <!--Пользователь-->
+            <RadioButton
+                android:id="@+id/rbIfUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/user"
+                android:textColor="@color/white_80"
+                android:textSize="18sp"
+                android:buttonTint="@color/white"
+                android:paddingTop="@dimen/short_margin"
+                android:paddingBottom="@dimen/short_margin"/>
+
+            <!--Админ-->
+            <RadioButton
+                android:id="@+id/rbIfAdmin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/admin"
+                android:textSize="18sp"
+                android:buttonTint="@color/white"
+                android:textColor="@color/white_80"
+                android:paddingTop="@dimen/short_margin"
+                android:paddingBottom="@dimen/short_margin"/>
+
+        </RadioGroup>
+
+        <!--Прогрес регистрации-->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"/>
+
+        <!--Регистрация-->
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="@string/do_register"
+            android:layout_marginBottom="50dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

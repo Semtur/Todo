@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">Todo</string>
+    <string name="app_name">ToDo</string>
+    <string name="log_in">Войти</string>
+    <string name="email">E-mail</string>
+    <string name="password">Пароль</string>
+    <string name="register">Регистрация</string>
+    <string name="user_name">Имя пользователя</string>
+    <string name="user_surname">Фамилия пользователя</string>
+    <string name="nickname">Ник</string>
+    <string name="user">Пользователь</string>
+    <string name="admin">Админ</string>
+    <string name="do_register">Зарегистрировать</string>
+    <string name="exit">Выход</string>
 </resources>
