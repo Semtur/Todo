@@ -11,4 +11,12 @@
     <string name="admin">Админ</string>
     <string name="do_register">Зарегистрировать</string>
     <string name="exit">Выход</string>
+    <string name="rename">Переименовать</string>
+    <string name="delete">Удалить</string>
+    <string name="folder_creating">Создание папки</string>
+    <string name="add_member">Добавить участника</string>
+    <string name="folder_name">Название папки</string>
+    <string name="search_member">Поиск участников</string>
+    <string name="confirmation">Подтверждение</string>
+    <string name="cancel">Отмена</string>
 </resources>

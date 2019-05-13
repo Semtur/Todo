@@ -55,7 +55,7 @@ public class FolderAdapter extends RecyclerView.Adapter<FolderAdapter.MyViewHold
     private void showPopup(View v) {
         PopupMenu popup = new PopupMenu(mContext, v);
         MenuInflater inflater = popup.getMenuInflater();
-        inflater.inflate(R.menu.folder_toolbar_menu, popup.getMenu());
+        inflater.inflate(R.menu.folder_context_menu, popup.getMenu());
         popup.show();
     }
 

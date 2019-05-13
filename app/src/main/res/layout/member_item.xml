@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:focusable="true">
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/short_margin"
+        android:paddingBottom="@dimen/short_margin"
+        android:paddingLeft="@dimen/standard_margin"
+        android:paddingRight="@dimen/standard_margin"
+        android:gravity="center_vertical">
+
+        <com.github.ivbaranov.mli.MaterialLetterIcon
+            android:id="@+id/mliUser"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:mli_letter_color="@color/white"
+            app:mli_shape_color="@color/colorAccent"
+            app:mli_shape_type="circle"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/short_margin"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNameAndSurname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tvNick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/acivCancelMember"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_close_white"
+            android:padding="9dp"
+            android:visibility="gone"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="#ADADAD"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="8dp"
+        android:background="#0D000000"/>
+
+</LinearLayout>

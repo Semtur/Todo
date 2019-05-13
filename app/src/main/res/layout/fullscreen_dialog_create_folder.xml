@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/localToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:text="@string/folder_creating"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnOk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OK"
+                    android:background="?attr/selectableItemBackground"
+                    android:backgroundTint="@null"
+                    android:drawableTint="@null"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TIL_Light"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/standard_margin">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietFolderName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="30"
+                    android:textColor="@color/dark"
+                    android:hint="@string/folder_name"
+                    android:inputType="textCapSentences" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnAddMember"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/button"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_marginBottom="@dimen/standard_margin"
+                android:textAllCaps="false"
+                android:text="@string/add_member"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMembers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/short_margin"
+                android:layout_marginRight="@dimen/short_margin"
+                android:nestedScrollingEnabled="false"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

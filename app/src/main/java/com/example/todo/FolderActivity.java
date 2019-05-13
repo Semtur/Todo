@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -46,6 +47,8 @@ public class FolderActivity extends AppCompatActivity implements View.OnClickLis
                 showPopup(v);
                 break;
             case R.id.fabAdd:
+                DialogFragment dialog = new FolderAdditionDialogFragment();
+                dialog.show(getSupportFragmentManager(), "FolderAdditionDialogFragment");
                 break;
         }
     }
