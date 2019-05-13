@@ -66,7 +66,8 @@ public class FolderAdapter extends RecyclerView.Adapter<FolderAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
-        holder.tvTitle.setText(mData.get(position));
+        final String folderName = mData.get(position);
+        holder.tvTitle.setText(folderName);
         holder.acivMenu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 showPopup(holder.acivMenu, position);
@@ -76,6 +77,7 @@ public class FolderAdapter extends RecyclerView.Adapter<FolderAdapter.MyViewHold
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mActivity, FolderContentActivity.class);
+                intent.putExtra("folder_name", folderName);
                 mActivity.startActivity(intent);
             }
         });

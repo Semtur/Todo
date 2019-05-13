@@ -139,6 +139,7 @@
                 android:textColor="@color/white_80"
                 android:textSize="18sp"
                 android:buttonTint="@color/white"
+                android:checked="true"
                 android:paddingTop="@dimen/short_margin"
                 android:paddingBottom="@dimen/short_margin"/>
 
@@ -161,6 +162,7 @@
             android:id="@+id/progressBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             android:layout_gravity="center_horizontal"/>
 
         <!--Регистрация-->

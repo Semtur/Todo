@@ -28,7 +28,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FolderRenameDialogFragment extends DialogFragment {
-    private static final String TAG = "FolderRenameDialogFrag";
+    private static final String TAG = "FolderRenameDialog";
     public static final String ARG_FOLDER_NAME = "argument_folder_name";
     private DialogDismissListener mListener;
 
