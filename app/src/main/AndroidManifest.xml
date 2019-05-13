@@ -23,6 +23,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".FolderActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".FolderContentActivity"
+            android:screenOrientation="portrait"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:background="@color/colorPrimary"
+            app:titleTextColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/acivBack"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="@dimen/short_margin"
+                    android:src="@drawable/ic_arrow_back"/>
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/short_margin"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/acivMenu"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:tint="@color/white"
+                    android:padding="5dp"
+                    android:layout_marginLeft="3dp"
+                    android:src="@drawable/ic_more_white_36"
+                    android:focusable="true" />
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            app:tabTextColor="@color/white_80"
+            app:tabSelectedTextColor="@color/white"
+            app:tabGravity="center"
+            android:layout_height="45dp"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/standard_margin"
+        android:src="@drawable/ic_add"
+        android:tint="@color/white"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
