@@ -10,7 +10,7 @@
     android:focusableInTouchMode="true"
     android:padding="@dimen/standard_margin"
     android:gravity="center"
-    tools:context=".LoginActivity">
+    tools:activity=".LoginActivity">
 
     <TextView
         android:layout_width="match_parent"

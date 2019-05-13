@@ -11,6 +11,13 @@
     <string name="admin">Админ</string>
     <string name="do_register">Зарегистрировать</string>
     <string name="exit">Выход</string>
+    <string name="access_denied">Неправильные e-mail или пароль!</string>
+    <string name="register_new_user">Регистрация пользователя</string>
+    <string name="forgot_password">Забыли пароль?</string>
+    <string name="email_exist">Пользователь с этим адресом электронной почты существует!</string>
+    <string name="nickname_exist">Ник занят! Придумайте другой!</string>
+    <string name="enter_email">Введите e-mail!</string>
+    <string name="password_reset">Пиьсмо со ссылкой сброса пароля отправлено вам на почту.</string>
     <string name="rename">Переименовать</string>
     <string name="delete">Удалить</string>
     <string name="folder_creating">Создание папки</string>
