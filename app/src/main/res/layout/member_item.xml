@@ -25,7 +25,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             app:mli_letter_color="@color/white"
-            app:mli_shape_color="@color/colorAccent"
+            app:mli_shape_color="@color/gray"
             app:mli_shape_type="circle"/>
 
         <LinearLayout
@@ -68,6 +68,6 @@
         android:layout_height="1dp"
         android:layout_marginLeft="64dp"
         android:layout_marginRight="8dp"
-        android:background="#0D000000"/>
+        android:background="@color/divider_color"/>
 
 </LinearLayout>

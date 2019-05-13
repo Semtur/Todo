@@ -20,7 +20,7 @@ public class TaskAllFragment extends Fragment {
         View v = inflater.inflate(R.layout.task_list_fragment, container, false);
 
         rvTask = v.findViewById(R.id.rvTask);
-        taskAdapter = new TaskAdapter(getActivity());
+        taskAdapter = new TaskAdapter(getActivity(), getActivity().getSupportFragmentManager());
         rvTask.setLayoutManager(new LinearLayoutManager(getActivity()));
         rvTask.setAdapter(taskAdapter);
 

@@ -58,11 +58,4 @@ public class SearchMembersDialogFragment extends DialogFragment {
         return v;
     }
 
-    @Override
-    public void onStart(){
-        super.onStart();
-
-    }
-
-
 }

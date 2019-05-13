@@ -24,4 +24,13 @@
     <string name="done">Готово</string>
     <string name="all">Все</string>
     <string name="edit">Редактировать</string>
+    <string name="task_addition">Создание задачи</string>
+    <string name="task_name">Название задачи</string>
+    <string name="new_sub_task">Новая подзадача</string>
+    <string name="description">Описание</string>
+    <string name="attach_file">Добавить файл</string>
+    <string name="notification_switch_on">Включить уведомление</string>
+    <string name="notification_date">Дата уведомления</string>
+    <string name="notification_text">Текст уведомления</string>
+    <string name="task_details">Детали задачи</string>
 </resources>

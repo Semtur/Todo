@@ -69,8 +69,8 @@ public class FolderContentActivity extends AppCompatActivity implements View.OnC
                 showPopup(v);
                 break;
             case R.id.fabAdd:
-                DialogFragment dialog = new FolderAdditionDialogFragment();
-                dialog.show(getSupportFragmentManager(), "FolderAdditionDialogFragment");
+                DialogFragment dialog = new TaskAdditionDialogFragment();
+                dialog.show(getSupportFragmentManager(), "TaskAdditionDialogFragment");
                 break;
         }
     }

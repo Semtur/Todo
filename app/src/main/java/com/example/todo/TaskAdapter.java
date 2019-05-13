@@ -1,5 +1,6 @@
 package com.example.todo;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
@@ -10,14 +11,19 @@ import android.widget.TextView;
 
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.PopupMenu;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.MyViewHolder> {
 
     private Context mContext;
+    private FragmentManager myFm;
 
-    TaskAdapter(Context context) {
+
+    TaskAdapter(Context context, FragmentManager fm) {
         mContext = context;
+        myFm = fm;
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
@@ -49,6 +55,13 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.MyViewHolder> 
         holder.acivMenu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
                 showPopup(holder.acivMenu);
+            }
+        });
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TaskDetailsDialogFragment dialog = new TaskDetailsDialogFragment();
+                dialog.show(myFm, "TaskDetailsDialogFragment");
             }
         });
     }

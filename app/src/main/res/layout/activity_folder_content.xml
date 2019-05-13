@@ -84,5 +84,4 @@
         android:src="@drawable/ic_add"
         android:tint="@color/white"/>
 
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

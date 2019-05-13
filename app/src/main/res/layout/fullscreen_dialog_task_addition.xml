@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    android:descendantFocusability="beforeDescendants"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/localToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:text="@string/task_addition"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnOk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OK"
+                    android:background="?attr/selectableItemBackground"
+                    android:backgroundTint="@null"
+                    android:drawableTint="@null"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="32dp"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TIL_Light"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/short_margin">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietTaskName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="30"
+                    android:textColor="@color/dark"
+                    android:hint="@string/task_name"
+                    android:inputType="textCapSentences" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/standard_margin"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSubTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:paddingRight="@dimen/standard_margin"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    style="@style/TIL_Light"
+                    android:layout_marginLeft="@dimen/standard_margin"
+                    android:layout_marginRight="@dimen/standard_margin">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tietNewSubTask"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="100"
+                        android:textColor="@color/dark"
+                        android:hint="@string/new_sub_task"
+                        android:inputType="textCapSentences" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnAddSubtitle"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/button"
+                    android:text="Ok"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TIL_Light"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="200"
+                    android:textColor="@color/dark"
+                    android:hint="@string/description"
+                    android:inputType="textCapSentences|textMultiLine" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAttachedFile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+
+            <Button
+                android:id="@+id/btnAttachFile"
+                android:layout_width="220dp"
+                android:layout_height="35dp"
+                android:background="@drawable/button"
+                android:backgroundTint="@color/gray"
+                android:paddingLeft="@dimen/standard_margin"
+                android:paddingRight="@dimen/standard_margin"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:text="@string/attach_file"
+                android:drawableRight="@drawable/ic_attach_file"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:textAllCaps="false"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/standard_margin"/>
+
+            <Switch
+                android:id="@+id/switchIsNotification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:textSize="16sp"
+                android:trackTint="@color/gray"
+                android:textColor="@color/gray"
+                android:paddingTop="@dimen/short_margin"
+                android:paddingBottom="@dimen/short_margin"
+                android:text="@string/notification_switch_on"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TIL_Light"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="20"
+                    android:textColor="@color/dark"
+                    android:hint="@string/notification_date"
+                    android:inputType="date" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TIL_Light"
+                android:layout_marginBottom="32dp"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietNotificationText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="60"
+                    android:textColor="@color/dark"
+                    android:hint="@string/notification_text"
+                    android:inputType="textCapSentences|textMultiLine" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
